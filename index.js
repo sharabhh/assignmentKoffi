@@ -33,5 +33,7 @@ async function calculate_profit(
 function roundOff(value) {
   return Math.round(value * 100) / 100;
 }
-// function call
+
+
+// currently the values are hardcoded
 calculate_profit("101206", "26-07-2023", "18-10-2023", 1000000);

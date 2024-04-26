@@ -10,7 +10,7 @@ async function calculate_profit(
   const data = apiData.data.data;
   for (var i = 0; i < data.length; i++) {
 // console.log('not inside');
-    if (start_date == data[i].date) {
+    if (start_date === data[i].date) {
       // console.log('i reached inside');
       var startDateVariable = data[i];
     }
@@ -28,7 +28,7 @@ async function calculate_profit(
         // console.log(simpleYear);
         var date = new Date(simpleYear,simpleMonth-1, simpleDay)
         date.setDate(date.getDate() + 1);
-        console.log(date)
+        // console.log(date)
         var updated_date = date.toLocaleDateString()
         var updatedDate, updatedMonth, updatedYear
         if(updated_date.length===9){
@@ -67,5 +67,4 @@ function roundOff(value) {
 
 
 // currently the values are hardcoded
-calculate_profit("101206", "25-03-2024", "26-03-2024", 1000000);
-// 184.12
+calculate_profit("101206", "23-03-2024", "26-03-2024", 1000000);

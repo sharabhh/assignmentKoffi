@@ -35,7 +35,6 @@ async function calculate_profit(
           updatedMonth = 0 + updated_date[0]
           updatedDate = updated_date[2] + updated_date[3]
           updatedYear = updated_date[5] + updated_date[6] + updated_date[7] + updated_date[8]
-          start_date = `${updatedDate}-${updatedMonth}-${updatedYear}`
           // console.log(updatedDate+updatedMonth+updatedYear);
         }else if(updated_date.length===10){
           updatedMonth = updated_date[0] + updated_date[1]
@@ -44,6 +43,7 @@ async function calculate_profit(
           
         }
         // console.log(start_date, data[4].date);
+        start_date = `${updatedDate}-${updatedMonth}-${updatedYear}`
         i=0
       }
     }
@@ -67,4 +67,4 @@ function roundOff(value) {
 
 
 // currently the values are hardcoded
-calculate_profit("101206", "23-03-2024", "26-03-2024", 1000000);
+calculate_profit("101206", "25-03-2024", "26-03-2024", 1000000);
